@@ -1,0 +1,36 @@
+
+application:
+  hello: hello Kevin Durant111
+
+
+spring:
+
+  redis:  
+    timeout: 10000
+    cluster:  
+      nodes:
+        - 10.5.2.243:6379
+        - 10.5.2.243:6380  
+        - 10.5.2.243:6381  
+        - 10.5.2.243:6382  
+        - 10.5.2.243:6383 
+        - 10.5.2.243:6384
+    pool:
+      max-active: 20
+      min-idle: 5
+      max-wait: 2
+      max-idle: 20
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.5.2.243:3306/springboot?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: test123
+
+custom:
+  datasource:
+    names: ds1
+    ds1: 
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://10.5.2.241:3306/springboot?useUnicode=true&characterEncoding=utf8&useSSL=false
+      username: root
+      password: test123
